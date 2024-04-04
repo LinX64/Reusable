@@ -81,7 +81,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "io.github.linx64"
             artifactId = "reusablecomponents"
-            version = "1.0.0"
+            version = System.getenv("RELEASE_VERSION")
             artifact("build/outputs/aar/${artifactId}-release.aar")
         }
 
