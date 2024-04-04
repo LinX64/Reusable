@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.detekt)
-    id("maven-publish")
+    id(libs.plugins.mavenPublish.get().pluginId)
 }
 
 android {
@@ -81,7 +81,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "io.github.linx64"
             artifactId = "reusablecomponents"
-            version = System.getenv("RELEASE_VERSION")
+            version = "1.0.0"
             artifact("build/outputs/aar/${artifactId}-release.aar")
         }
 
