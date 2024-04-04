@@ -46,6 +46,12 @@ jobs:
       - name: Check Gradle wrapper
         uses: gradle/wrapper-validation-action@v2
 
+      - name: Set Version Name
+        run: |
+          sed -i 's/^VERSION_NAME=.*/VERSION_NAME=${{ env.RELEASE_VERSION }}/' gradle.properties
+        env:
+          RELEASE_VERSION: ${{ github.event.inputs.release-version }}
+
       - name: 🚀 Publish Library on Maven Central
         if: always() && (github.event.inputs.should-publish == 'true')
         run: ./gradlew publishAndReleaseToMavenCentral --no-configuration-cache
