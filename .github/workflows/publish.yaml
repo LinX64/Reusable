@@ -46,44 +46,6 @@ jobs:
       - name: Check Gradle wrapper
         uses: gradle/wrapper-validation-action@v2
 
-      - name: Create tag
-        if: always() && (github.event.inputs.should-publish == 'true')
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.git.createRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: 'refs/tags/${{ github.event.inputs.release-version }}',
-              sha: context.sha
-            })
-
-      - name: Assemble
-        if: always() && (github.event.inputs.should-publish == 'true')
-        run: ./gradlew :reusablecomponents:assemble
-        env:
-          RELEASE_VERSION: ${{ github.event.inputs.release-version }}
-
-      - name: Publish to GitHub Packages
-        if: always() && (github.event.inputs.should-publish == 'true')
-        run: ./gradlew :reusablecomponents:publish
-        env:
-          GITHUB_USERNAME: ${{ github.actor }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_VERSION: ${{ github.event.inputs.release-version }}
-
-      - name: Create Release
-        if: always() && (github.event.inputs.should-publish == 'true')
-        run: |
-          gh release create "$tag" \
-              --repo="$GITHUB_REPOSITORY" \
-              --title="v${{ github.event.inputs.release-version }}" \
-              --generate-notes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref_name }}
-          RELEASE_VERSION: ${{ github.event.inputs.release-version }}
-
       - name: Publish Library on Maven Central
         if: always() && (github.event.inputs.should-publish == 'true')
         run: ./gradlew publishAndReleaseToMavenCentral --no-configuration-cache
@@ -92,3 +54,21 @@ jobs:
           ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.GPG_PASSWORD }}
           ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
           ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+
+      - name: Create Release ✅
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          draft: true
+
+      - name: Publish to GitHub Packages
+        if: always() && (github.event.inputs.should-publish == 'true')
+        run: ./gradlew :reusablecomponents:publish
+        env:
+          GITHUB_USERNAME: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_VERSION: ${{ github.event.inputs.release-version }}}
