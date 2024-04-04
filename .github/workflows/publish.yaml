@@ -6,7 +6,6 @@ on:
       - v*
     branches:
       - master
-  pull_request:
 
   workflow_dispatch:
     inputs:
@@ -86,6 +85,7 @@ jobs:
           RELEASE_VERSION: ${{ github.event.inputs.release-version }}
 
       - name: Publish Library on Maven Central
+        if: always() && (github.event.inputs.should-publish == 'true')
         run: ./gradlew publishAndReleaseToMavenCentral --no-configuration-cache
         env:
           ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.GPG_KEY }}
