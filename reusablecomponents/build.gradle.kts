@@ -110,3 +110,7 @@ mavenPublishing {
         )
     )
 }
+
+tasks.named("signReleasePublication") {
+    dependsOn(":reusablecomponents:bundleReleaseAar")
+}
