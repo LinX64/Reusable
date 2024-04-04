@@ -46,7 +46,7 @@ jobs:
       - name: Check Gradle wrapper
         uses: gradle/wrapper-validation-action@v2
 
-      - name: Publish Library on Maven Central
+      - name: Publish Library on Maven Central 🚀
         if: always() && (github.event.inputs.should-publish == 'true')
         run: ./gradlew publishAndReleaseToMavenCentral --no-configuration-cache
         env:
@@ -58,14 +58,14 @@ jobs:
       - name: Create Release ✅
         id: create_release
         uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           draft: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish to GitHub Packages
+      - name: Publish to GitHub Packages 🚀
         if: always() && (github.event.inputs.should-publish == 'true')
         run: ./gradlew :reusablecomponents:publish
         env:
