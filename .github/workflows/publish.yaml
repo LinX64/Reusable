@@ -46,7 +46,7 @@ jobs:
       - name: Check Gradle wrapper
         uses: gradle/wrapper-validation-action@v2
 
-      - name: Publish Library on Maven Central 🚀
+      - name: 🚀 Publish Library on Maven Central
         if: always() && (github.event.inputs.should-publish == 'true')
         run: ./gradlew publishAndReleaseToMavenCentral --no-configuration-cache
         env:
@@ -55,18 +55,18 @@ jobs:
           ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
           ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
 
-      - name: Assemble
+      - name: 🔨Assemble
         if: always() && (github.event.inputs.should-publish == 'true')
         run: ./gradlew :reusablecomponents:assemble
         env:
           RELEASE_VERSION: ${{ github.event.inputs.release-version }}
 
-      - name: Create Release
+      - name: ⚙️ Create Release
         if: always() && (github.event.inputs.should-publish == 'true')
         run: |
           gh release create "$tag" \
               --repo="$GITHUB_REPOSITORY" \
-              --title="${{ github.event.inputs.release-version }}" \
+              --title="v${{ github.event.inputs.release-version }}" \
               --generate-notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
