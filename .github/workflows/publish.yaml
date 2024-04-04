@@ -55,12 +55,20 @@ jobs:
           ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
           ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
 
-      - name: Create Release ✅
-        id: create_release
-        uses: actions/create-release@v1
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          draft: true
+      - name: Assemble
+        if: always() && (github.event.inputs.should-publish == 'true')
+        run: ./gradlew :reusablecomponents:assemble
+        env:
+          RELEASE_VERSION: ${{ github.event.inputs.release-version }}
+
+      - name: Create Release
+        if: always() && (github.event.inputs.should-publish == 'true')
+        run: |
+          gh release create "$tag" \
+              --repo="$GITHUB_REPOSITORY" \
+              --title="${{ github.event.inputs.release-version }}" \
+              --generate-notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
+          RELEASE_VERSION: ${{ github.event.inputs.release-version }}
