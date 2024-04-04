@@ -79,7 +79,6 @@ dependencies {
 
     detektPlugins(libs.detekt.formatting)
 
-    testImplementation(libs.junit)
     debugImplementation(libs.androidx.ui.test.manifest)
     debugImplementation(libs.androidx.ui.tooling)
 }
