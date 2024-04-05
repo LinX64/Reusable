@@ -8,17 +8,6 @@ This library is a treasure trove of reusable components tailored for Jetpack Com
 simplify the creation of complex interfaces. It's your go-to toolkit for crafting visually stunning
 UIs effortlessly. So, let's cut to the chase and unleash the magic! 😃
 
-## Components
-
-Currently, the library contains the following components:
-
-- Containers
-- Buttons
-- Columns
-- Preview
-- Spacers
-- Other necessary components will be added soon.
-
 ## Installation
 
 To use the library, add the following line of code to your `build.gradle` file if you are using
@@ -36,11 +25,21 @@ implementation 'io.github.linx64:reusablecomponents:<version>'
 
 Version Catalog:
 
-```Kotlin
+```Kotlin-dsl
 reusablecomponents_version = <version>
-
 reusableComponents = { group = "io.github.linx64", name = "reusablecomponents", version.ref = "reuseableComponents" }
 ```
+
+## Components
+
+Currently, the library contains the following components:
+
+- [Containers](https://github.com/LinX64/Reusable/tree/develop/reusablecomponents/src/main/kotlin/com/client/reusablecomponents/containers)
+- [Buttons](https://github.com/LinX64/Reusable/tree/develop/reusablecomponents/src/main/kotlin/com/client/reusablecomponents/buttons)
+- [Columns](https://github.com/LinX64/Reusable/blob/develop/reusablecomponents/src/main/kotlin/com/client/reusablecomponents/containers/CenteredColumn.kt)
+- [Preview](https://github.com/LinX64/Reusable/tree/develop/reusablecomponents/src/main/kotlin/com/client/reusablecomponents/previews)
+- [Spacers](https://github.com/LinX64/Reusable/tree/develop/reusablecomponents/src/main/kotlin/com/client/reusablecomponents/spacers)
+- Other necessary components will be added soon.
 
 ## Usage
 
@@ -50,18 +49,7 @@ let's say you want to have a Scrollable screen with a few Buttons:
 ```kotlin
 ScrollableScreen {
     PrimaryButton(text = R.string.app_name, onClick = {})
-
     Spacer(modifier = Modifier.height(16.dp))
-
-    PrimaryButton(text = R.string.app_name, onClick = {})
-
-    Spacer(modifier = Modifier.height(16.dp))
-
-    PrimaryButton(text = R.string.app_name, onClick = {})
-
-    Spacer(modifier = Modifier.height(16.dp))
-
-    PrimaryButton(text = R.string.app_name, onClick = {})
 }
 ```
 
