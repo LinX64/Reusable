@@ -1,8 +1,12 @@
 # 📘 Reusable Components library for Compose
 
-![master CI](https://github.com/LinX64/Reusable/actions/workflows/publish.yaml/badge.svg)
-![develop CI](https://github.com/LinX64/Reusable/actions/workflows/ci.yaml/badge.svg)
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.linx64/reusablecomponents.svg)](https://central.sonatype.com/artifact/io.github.linx64/reusablecomponents/overview)
+<div align="center">
+  <img src="https://github.com/LinX64/Reusable/actions/workflows/publish.yaml/badge.svg" alt="master CI">
+  <img src="https://github.com/LinX64/Reusable/actions/workflows/ci.yaml/badge.svg" alt="develop CI">
+  <a href="https://central.sonatype.com/artifact/io.github.linx64/reusablecomponents/overview">
+    <img src="https://img.shields.io/maven-central/v/io.github.linx64/reusablecomponents.svg?label=Maven%20Central&logo=android&style=flat-square" alt="Maven Central">
+  </a>
+</div>
 
 This library is a treasure trove of reusable components tailored for Jetpack Compose, designed to
 simplify the creation of complex interfaces. It's your go-to toolkit for crafting visually stunning
@@ -57,8 +61,12 @@ And that's it! You have a scrollable screen with a few buttons. You can customiz
 passing your own `modifier` to it. The same goes for the buttons, you can pass your own `modifier`
 to it.
 
-**Important note:** To use the Preview components, you'll nned to add your own theme first, then use the
+**Important note:** To use the Preview components, you'll need to add your theme first, then use the
 components to create your UI.
+
+##  🙋‍Contributing
+
+Please read [contribution guidelines](CONTRIBUTING.md) for more information regarding contribution.
 
 ## License
 
