@@ -65,13 +65,9 @@ CenteredColumn {
 }
 ```
 
-And that's it! You have a scrollable screen with a few buttons:
+And that's it! You have a scrollable screen with a few buttons
 
-<img src="https://i.imgur.com/rorBQPg.png"  alt="banner" height="200"/>
-
-You can customize the container by passing your own `modifier` to it. The same goes for the buttons,
-you can pass your own `modifier`
-to it.
+You can customize the container by passing your own `modifier` to it. The same goes for the buttons, you can pass your own `modifier` to the buttons.
 
 **Important note:** To use the Preview components, you'll need to add your theme first, then use the
 components to create your UI.
