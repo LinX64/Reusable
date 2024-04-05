@@ -76,7 +76,8 @@ dependencies {
     implementation(libs.androidx.compose.material.iconsExtended)
 
     // The library
-    implementation(libs.reusableComponents)
+    //implementation(libs.reusableComponents)
+    implementation(project(":reusablecomponents"))
 
     detektPlugins(libs.detekt.formatting)
 

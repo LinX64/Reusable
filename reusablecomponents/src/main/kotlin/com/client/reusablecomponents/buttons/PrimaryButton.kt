@@ -10,9 +10,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.client.reusablecomponents.containers.CenteredColumn
+import com.client.reusablecomponents.previews.MultiThemePreviews
 import io.github.linx64.reusablecomponents.R
 
 @Composable
@@ -34,8 +34,8 @@ fun PrimaryButton(
     }
 }
 
+@MultiThemePreviews
 @Composable
-@Preview(showBackground = true)
 private fun PrimaryButtonPreview() {
     CenteredColumn {
         PrimaryButton(
