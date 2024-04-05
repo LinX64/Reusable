@@ -15,8 +15,9 @@ Currently, the library contains the following components:
 - Containers
 - Buttons
 - Columns
-- TODO: Preview
-- TODO: Spacers
+- Preview
+- Spacers
+- Other necessary components will be added soon.
 
 ## Installation
 
