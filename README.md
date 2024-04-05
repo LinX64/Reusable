@@ -1,18 +1,18 @@
-<div align="center">
+<p align="center">
   <img src="https://github.com/LinX64/Reusable/actions/workflows/publish.yaml/badge.svg" alt="master CI">
   <img src="https://github.com/LinX64/Reusable/actions/workflows/ci.yaml/badge.svg" alt="develop CI">
   <a href="https://central.sonatype.com/artifact/io.github.linx64/reusablecomponents/overview">
     <img src="https://img.shields.io/maven-central/v/io.github.linx64/reusablecomponents.svg?label=Maven%20Central&logo=android&style=flat-square" alt="Maven Central">
   </a>
-</div>
+</p>
 
-# 📘 Reusable Components library for Compose
+# 🚀📘 Reusable Components library for Compose
 
 This library is a treasure trove of reusable components tailored for Jetpack Compose, designed to
 simplify the creation of complex interfaces. It's your go-to toolkit for crafting visually stunning
 UIs effortlessly. So, let's cut to the chase and unleash the magic! 😃
 
-<img src="https://i.imgur.com/mRCBlcG.png" />
+<img src="https://i.imgur.com/mRCBlcG.png"  alt="banner"/>
 
 ## Installation
 
@@ -23,7 +23,7 @@ Kotlin DSL:
 implementation("io.github.linx64:reusablecomponents:<version>")
 ```
 
-Or this for Groovy:
+Groovy:
 
 ```Groovy
 implementation 'io.github.linx64:reusablecomponents:<version>'
@@ -43,7 +43,7 @@ Currently, the library contains the following components:
 - [Containers](https://github.com/LinX64/Reusable/tree/develop/reusablecomponents/src/main/kotlin/com/client/reusablecomponents/containers)
 - [Buttons](https://github.com/LinX64/Reusable/tree/develop/reusablecomponents/src/main/kotlin/com/client/reusablecomponents/buttons)
 - [Columns](https://github.com/LinX64/Reusable/blob/develop/reusablecomponents/src/main/kotlin/com/client/reusablecomponents/containers/CenteredColumn.kt)
-- [Preview](https://github.com/LinX64/Reusable/tree/develop/reusablecomponents/src/main/kotlin/com/client/reusablecomponents/previews)
+- [Previews](https://github.com/LinX64/Reusable/tree/develop/reusablecomponents/src/main/kotlin/com/client/reusablecomponents/previews)
 - [Spacers](https://github.com/LinX64/Reusable/tree/develop/reusablecomponents/src/main/kotlin/com/client/reusablecomponents/spacers)
 - Other necessary components will be added soon.
 
@@ -53,20 +53,30 @@ Using the components is very simple. Just add the library to your project and ba
 let's say you want to have a Scrollable screen with a few Buttons:
 
 ```kotlin
-ScrollableScreen {
+CenteredColumn {
+    Text(text = "Here is the Home Screen!")
+    FillHeightSpacer()
+    FillHorizontalHeight()
     PrimaryButton(text = R.string.app_name, onClick = {})
-    Spacer(modifier = Modifier.height(16.dp))
+    FillHorizontalHeight()
+    PrimaryButton(text = R.string.app_name, onClick = {})
+    FillHorizontalHeight()
+    SecondaryButton(text = R.string.app_name, onClick = {})
 }
 ```
 
-And that's it! You have a scrollable screen with a few buttons. You can customize the container by
-passing your own `modifier` to it. The same goes for the buttons, you can pass your own `modifier`
+And that's it! You have a scrollable screen with a few buttons:
+
+<img src="https://i.imgur.com/rorBQPg.png"  alt="banner" height="200"/>
+
+You can customize the container by passing your own `modifier` to it. The same goes for the buttons,
+you can pass your own `modifier`
 to it.
 
 **Important note:** To use the Preview components, you'll need to add your theme first, then use the
 components to create your UI.
 
-##  🙋‍Contributing
+## 🙋‍Contributing
 
 Please read [contribution guidelines](CONTRIBUTING.md) for more information regarding contribution.
 
