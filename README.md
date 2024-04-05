@@ -1,5 +1,3 @@
-# 📘 Reusable Components library for Compose
-
 <div align="center">
   <img src="https://github.com/LinX64/Reusable/actions/workflows/publish.yaml/badge.svg" alt="master CI">
   <img src="https://github.com/LinX64/Reusable/actions/workflows/ci.yaml/badge.svg" alt="develop CI">
@@ -8,9 +6,13 @@
   </a>
 </div>
 
+# 📘 Reusable Components library for Compose
+
 This library is a treasure trove of reusable components tailored for Jetpack Compose, designed to
 simplify the creation of complex interfaces. It's your go-to toolkit for crafting visually stunning
 UIs effortlessly. So, let's cut to the chase and unleash the magic! 😃
+
+<img src="https://i.imgur.com/mRCBlcG.png" />
 
 ## Installation
 
