@@ -2,7 +2,7 @@
 
 ![master CI](https://github.com/LinX64/Reusable/actions/workflows/publish.yaml/badge.svg)
 ![develop CI](https://github.com/LinX64/Reusable/actions/workflows/ci.yaml/badge.svg)
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.libktx/ktx-module.svg)](https://central.sonatype.com/artifact/io.github.linx64/reusablecomponents/overview)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.linx64/reusablecomponents.svg)](https://central.sonatype.com/artifact/io.github.linx64/reusablecomponents/overview)
 
 This library is a treasure trove of reusable components tailored for Jetpack Compose, designed to
 simplify the creation of complex interfaces. It's your go-to toolkit for crafting visually stunning
@@ -17,6 +17,29 @@ Currently, the library contains the following components:
 - Columns
 - TODO: Preview
 - TODO: Spacers
+
+## Installation
+
+To use the library, add the following line of code to your `build.gradle` file if you are using
+Kotlin DSL:
+
+```Kotlin
+implementation("io.github.linx64:reusablecomponents:<version>")
+```
+
+Or this for Groovy:
+
+```Groovy
+implementation 'io.github.linx64:reusablecomponents:<version>'
+```
+
+Version Catalog:
+
+```Kotlin
+reusablecomponents_version = <version>
+
+reusableComponents = { group = "io.github.linx64", name = "reusablecomponents", version.ref = "reuseableComponents" }
+```
 
 ## Usage
 
@@ -48,29 +71,6 @@ to it.
 This is how it will look like:
 
 <img src="https://i.imgur.com/9AfnPTk.png" width="250" />
-
-## Installation
-
-To use the library, add the following line of code to your `build.gradle` file if you are using
-Kotlin DSL:
-
-```Kotlin
-implementation("io.github.linx64:reusablecomponents:<version>")
-```
-
-Or this for Groovy:
-
-```Groovy
-implementation 'io.github.linx64:reusablecomponents:<version>'
-```
-
-Version Catalog:
-
-```Kotlin
-reusablecomponents_version = <version>
-
-reusableComponents = { group = "io.github.linx64", name = "reusablecomponents", version.ref = "reuseableComponents" }
-```
 
 ## License
 
