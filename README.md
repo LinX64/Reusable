@@ -53,8 +53,11 @@ Using the components is very simple. Just add the library to your project and ba
 let's say you want to have a Scrollable screen with a few Buttons:
 
 ```kotlin
-CenteredColumn {
-    Text(text = "Here is the Home Screen!")
+ScrollableScreen {
+    Text(
+        modifier = Modifier.align(Alignment.CenterHorizontally),
+        text = "Here is the Home Screen!"
+    )
     FillHeightSpacer()
     FillHorizontalHeight()
     PrimaryButton(text = R.string.app_name, onClick = {})
