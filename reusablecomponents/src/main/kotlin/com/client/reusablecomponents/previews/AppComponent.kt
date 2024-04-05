@@ -5,11 +5,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.client.reusablecomponents.buttons.PrimaryButton
 import io.github.linx64.reusablecomponents.R
 
+/**
+ * A component that wraps the content in a [Surface] and applies padding.
+ * The content is placed in a [Column].
+ * IMPORTANT: Remember to add your own Theme while using this component.
+ */
 @Composable
 fun AppComponent(
     modifier: Modifier = Modifier,
@@ -26,7 +30,7 @@ fun AppComponent(
     }
 }
 
-@Preview(showBackground = true)
+@MultiThemePreviews
 @Composable
 private fun AppPreview() {
     AppComponent {

@@ -11,17 +11,17 @@ import androidx.compose.ui.tooling.preview.Preview
  */
 
 @Preview(
-    name = "Nexus S",
-    device = "id:Nexus S",
+    name = "Pixel 3a Light",
+    device = "id:pixel_3a_xl",
     showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL,
 )
 
 @Preview(
-    name = "Pixel 7",
-    device = "id:pixel_7",
-    showBackground = true
+    name = "Pixel 3a Dark",
+    device = "id:pixel_3a_xl",
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES or Configuration.UI_MODE_TYPE_UNDEFINED,
 )
 
-@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, name = "Dark theme")
-@Preview(uiMode = Configuration.UI_MODE_NIGHT_NO, name = "Light theme")
 annotation class MultiThemePreviews
