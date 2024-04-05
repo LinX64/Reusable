@@ -64,9 +64,9 @@ to it.
 **Important note:** To use the Preview components, you'll need to add your theme first, then use the
 components to create your UI.
 
-## 🙋‍Contributing
+##  🙋‍Contributing
 
-Please Read [contribution guidelines](CONTRIBUTING.md) for more information regarding contribution.
+Please read [contribution guidelines](CONTRIBUTING.md) for more information regarding contribution.
 
 ## License
 
