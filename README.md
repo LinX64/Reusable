@@ -57,9 +57,8 @@ And that's it! You have a scrollable screen with a few buttons. You can customiz
 passing your own `modifier` to it. The same goes for the buttons, you can pass your own `modifier`
 to it.
 
-This is how it will look like:
-
-<img src="https://i.imgur.com/9AfnPTk.png" width="250" />
+**Important note:** To use the Preview components, you'll nned to add your own theme first, then use the
+components to create your UI.
 
 ## License
 
