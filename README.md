@@ -2,8 +2,11 @@
 
 ![master CI](https://github.com/LinX64/Reusable/actions/workflows/publish.yaml/badge.svg)
 ![develop CI](https://github.com/LinX64/Reusable/actions/workflows/ci.yaml/badge.svg)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.libktx/ktx-module.svg)](https://central.sonatype.com/artifact/io.github.linx64/reusablecomponents/overview)
 
-This library is a treasure trove of reusable components tailored for Jetpack Compose, designed to simplify the creation of complex interfaces. It's your go-to toolkit for crafting visually stunning UIs effortlessly. So, let's cut to the chase and unleash the magic! 😃
+This library is a treasure trove of reusable components tailored for Jetpack Compose, designed to
+simplify the creation of complex interfaces. It's your go-to toolkit for crafting visually stunning
+UIs effortlessly. So, let's cut to the chase and unleash the magic! 😃
 
 ## Components
 
@@ -48,7 +51,26 @@ This is how it will look like:
 
 ## Installation
 
-...I will add this section once it is published to Maven Central.
+To use the library, add the following line of code to your `build.gradle` file if you are using
+Kotlin DSL:
+
+```Kotlin
+implementation("io.github.linx64:reusablecomponents:<version>")
+```
+
+Or this for Groovy:
+
+```Groovy
+implementation 'io.github.linx64:reusablecomponents:<version>'
+```
+
+Version Catalog:
+
+```Kotlin
+reusablecomponents_version = <version>
+
+reusableComponents = { group = "io.github.linx64", name = "reusablecomponents", version.ref = "reuseableComponents" }
+```
 
 ## License
 
