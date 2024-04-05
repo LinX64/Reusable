@@ -65,8 +65,6 @@ android {
 }
 
 dependencies {
-    implementation(projects.reusablecomponents)
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -76,6 +74,10 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material.iconsExtended)
+
+    // The library
+    //implementation(libs.reusableComponents)
+    implementation(project(":reusablecomponents"))
 
     detektPlugins(libs.detekt.formatting)
 

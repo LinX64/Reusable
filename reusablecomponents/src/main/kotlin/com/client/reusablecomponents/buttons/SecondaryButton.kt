@@ -12,10 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.client.reusablecomponents.containers.CenteredColumn
-import io.github.linx64.reusablecomponents.R
 
 @Composable
 fun SecondaryButton(
@@ -42,17 +39,6 @@ fun SecondaryButton(
             text = stringResource(id = text),
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.Bold
-        )
-    }
-}
-
-@Composable
-@Preview(showBackground = true)
-private fun SecondaryButtonPreview() {
-    CenteredColumn {
-        SecondaryButton(
-            text = R.string.cancel,
-            onClick = {}
         )
     }
 }
