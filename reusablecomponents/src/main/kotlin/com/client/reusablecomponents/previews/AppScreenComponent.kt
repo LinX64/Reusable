@@ -1,7 +1,8 @@
-package com.client.reusablecomponents.preview
+package com.client.reusablecomponents.previews
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -14,13 +15,17 @@ fun AppScreenComponent(
     modifier: Modifier = Modifier,
     content: @Composable () -> Unit,
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .then(modifier),
+    Surface(
+        modifier = Modifier.fillMaxSize(),
     ) {
-        CenteredColumn {
-            content()
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .then(modifier),
+        ) {
+            CenteredColumn {
+                content()
+            }
         }
     }
 }

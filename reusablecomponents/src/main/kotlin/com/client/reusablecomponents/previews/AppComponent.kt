@@ -1,7 +1,8 @@
-package com.client.reusablecomponents.preview
+package com.client.reusablecomponents.previews
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -14,12 +15,14 @@ fun AppComponent(
     modifier: Modifier = Modifier,
     content: @Composable () -> Unit,
 ) {
-    Column(
-        modifier = Modifier
-            .padding(16.dp)
-            .then(modifier),
-    ) {
-        content()
+    Surface {
+        Column(
+            modifier = Modifier
+                .padding(16.dp)
+                .then(modifier),
+        ) {
+            content()
+        }
     }
 }
 

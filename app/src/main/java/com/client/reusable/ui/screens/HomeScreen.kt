@@ -11,7 +11,8 @@ import androidx.compose.ui.unit.dp
 import com.client.reusable.R
 import com.client.reusablecomponents.buttons.PrimaryButton
 import com.client.reusablecomponents.containers.CenteredColumn
-import com.client.reusablecomponents.preview.AppScreenComponent
+import com.client.reusablecomponents.previews.AppScreenComponent
+import com.client.reusablecomponents.spacers.FillHeightSpacer
 
 @Composable
 fun HomeScreen() {
@@ -20,6 +21,8 @@ fun HomeScreen() {
             Text(text = "Buttons")
 
             Spacer(modifier = Modifier.height(16.dp))
+
+            FillHeightSpacer()
 
             PrimaryButton(text = R.string.app_name, onClick = {})
         }
