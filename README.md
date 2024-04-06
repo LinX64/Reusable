@@ -32,8 +32,8 @@ implementation 'io.github.linx64:reusablecomponents:<version>'
 Version Catalog:
 
 ```Kotlin-dsl
-reusablecomponents_version = <version>
-reusableComponents = { group = "io.github.linx64", name = "reusablecomponents", version.ref = "reuseableComponents" }
+reusable-components = <version>
+reusableComponents = { group = "io.github.linx64", name = "reusablecomponents", version.ref = "reusable-components" }
 ```
 
 ## Components
