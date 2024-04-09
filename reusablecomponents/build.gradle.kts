@@ -3,7 +3,7 @@ import com.vanniktech.maven.publish.AndroidSingleVariantLibrary
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id(libs.plugins.mavenPublish.get().pluginId)
+    alias(libs.plugins.mavenPublish)
 }
 
 android {

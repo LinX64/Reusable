@@ -77,7 +77,7 @@ dependencies {
 
     // The library
     //implementation(libs.reusableComponents)
-    implementation(project(":reusablecomponents"))
+    implementation(projects.reusablecomponents)
 
     detektPlugins(libs.detekt.formatting)
 
