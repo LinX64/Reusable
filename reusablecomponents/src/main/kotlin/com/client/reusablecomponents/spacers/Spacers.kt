@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun FillHorizontalHeight() = Spacer(modifier = Modifier.height(16.dp))
+fun HorizontalSpacer() = Spacer(modifier = Modifier.height(16.dp))
 
 /**
  * Spacers for Column
