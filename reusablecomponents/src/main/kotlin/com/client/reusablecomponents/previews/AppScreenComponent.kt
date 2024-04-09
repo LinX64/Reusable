@@ -10,7 +10,7 @@ import com.client.reusablecomponents.containers.CenteredColumn
 import io.github.linx64.reusablecomponents.R
 
 /**
- * A component that wraps the content in a [Surface] and centers the content.
+ * A component that wraps the content in a [Surface] and then centers it
  * The content is placed in a [Column].
  * IMPORTANT: Remember to add your own Theme while using this component.
  */
@@ -20,16 +20,12 @@ fun AppScreenComponent(
     content: @Composable () -> Unit,
 ) {
     Surface(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .then(modifier),
     ) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .then(modifier),
-        ) {
-            CenteredColumn {
-                content()
-            }
+        CenteredColumn {
+            content()
         }
     }
 }

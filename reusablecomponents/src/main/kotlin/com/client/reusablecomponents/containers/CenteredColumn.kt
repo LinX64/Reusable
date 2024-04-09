@@ -31,7 +31,7 @@ fun CenteredColumn(
 
 @Preview(showBackground = true)
 @Composable
-private fun CenterColumnPreview() {
+private fun CenteredColumnPreview() {
     AppScreenComponent {
         CenteredColumn {
             Text(text = "Text in center")

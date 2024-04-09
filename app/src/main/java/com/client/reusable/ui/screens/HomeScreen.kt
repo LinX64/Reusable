@@ -13,7 +13,7 @@ import com.client.reusablecomponents.containers.ScrollableScreen
 import com.client.reusablecomponents.previews.AppScreenComponent
 import com.client.reusablecomponents.previews.MultiThemePreviews
 import com.client.reusablecomponents.spacers.FillHeightSpacer
-import com.client.reusablecomponents.spacers.FillHorizontalHeight
+import com.client.reusablecomponents.spacers.HorizontalSpacer
 
 @Composable
 fun HomeScreen() {
@@ -26,15 +26,15 @@ fun HomeScreen() {
 
             FillHeightSpacer()
 
-            FillHorizontalHeight()
+            HorizontalSpacer()
 
             PrimaryButton(text = R.string.app_name, onClick = {})
 
-            FillHorizontalHeight()
+            HorizontalSpacer()
 
             PrimaryButton(text = R.string.app_name, onClick = {})
 
-            FillHorizontalHeight()
+            HorizontalSpacer()
 
             SecondaryButton(text = R.string.app_name, onClick = {})
         }

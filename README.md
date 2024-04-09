@@ -32,8 +32,8 @@ implementation 'io.github.linx64:reusablecomponents:<version>'
 Version Catalog:
 
 ```Kotlin-dsl
-reusablecomponents_version = <version>
-reusableComponents = { group = "io.github.linx64", name = "reusablecomponents", version.ref = "reuseableComponents" }
+reusable-components = <version>
+reusableComponents = { group = "io.github.linx64", name = "reusablecomponents", version.ref = "reusable-components" }
 ```
 
 ## Components
@@ -68,9 +68,9 @@ ScrollableScreen {
 }
 ```
 
-And that's it! You have a scrollable screen with a few buttons
+And that's it! You have a scrollable screen with a few buttons.
 
-You can customize the container by passing your own `modifier` to it. The same goes for the buttons, you can pass your own `modifier` to the buttons.
+You can customize the container by passing your `modifier` to it. The same goes for the buttons.
 
 **Important note:** To use the Preview components, you'll need to add your theme first, then use the
 components to create your UI.
