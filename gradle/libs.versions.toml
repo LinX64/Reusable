@@ -8,7 +8,7 @@ composeBom = "2024.04.01"
 material-3 = "1.2.1"
 detekt = "1.23.6"
 mavenPublish = "0.28.0"
-reusableComponents = "1.1.4"
+reusableComponents = "1.1.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
