@@ -7,7 +7,7 @@ activityCompose = "1.9.0"
 composeBom = "2024.06.00"
 material-3 = "1.2.1"
 detekt = "1.23.6"
-mavenPublish = "0.28.0"
+mavenPublish = "0.29.0"
 reusableComponents = "1.2"
 
 [libraries]
